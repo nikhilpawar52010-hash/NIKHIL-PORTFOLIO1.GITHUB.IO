@@ -2,228 +2,261 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Nikhil Pawar | Student Portfolio</title>
-  <!-- Google Fonts & Font Awesome for clean icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Nikhil Pawar | Aspiring Developer Portfolio</title>
+  <!-- Google Fonts + Font Awesome Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Dark/Light mode toggle (extra feature) -->
+  <!-- ========== DARK/LIGHT MODE TOGGLE BUTTON (FIXED) ========== -->
   <div class="theme-toggle-wrapper">
-    <button id="themeToggle" class="theme-btn" aria-label="Dark/Light mode">
+    <button id="themeToggleBtn" class="theme-toggle" aria-label="Dark/Light mode">
       <i class="fas fa-moon"></i>
     </button>
   </div>
 
-  <!-- Navigation Bar (simple & sticky) -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="logo">NP</div>
-      <ul class="nav-links" id="navLinks">
+  <!-- ========== MOBILE HAMBURGER MENU (OVERLAY) ========== -->
+  <div class="hamburger" id="hamburgerIcon">
+    <i class="fas fa-bars"></i>
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-header">
+      <span class="mobile-logo">NP</span>
+      <div class="close-mobile" id="closeMobileNav"><i class="fas fa-times"></i></div>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ========== DESKTOP NAVIGATION ========== -->
+  <header class="header">
+    <div class="container nav-container">
+      <div class="logo">Nikhil<span>Pawar</span></div>
+      <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#achievements">Achievements</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#certifications">Certifications</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <div class="hamburger" id="hamburger">
-        <i class="fas fa-bars"></i>
-      </div>
     </div>
-  </nav>
+  </header>
 
   <main>
-    <!-- HOME Section -->
-    <section id="home" class="section home-section">
-      <div class="container home-container">
-        <div class="profile-img-wrapper">
-          <!-- placeholder profile image (replace with actual photo in assets/images) -->
-          <img src="assets/images/profile-placeholder.jpg" alt="Nikhil Pawar Profile" class="profile-photo" onerror="this.src='https://placehold.co/400x400?text=Nikhil+Pawar'">
-        </div>
-        <div class="home-content">
-          <h1 class="greeting">Hi, I'm <span class="highlight">NIKHIL PRAMOD PAWAR</span></h1>
-          <div class="typing-wrapper">
-            <span class="static-text">Aspiring </span>
-            <span class="dynamic-text" id="typedText"></span>
+    <!-- ========== HERO SECTION ========== -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>NIKHIL PRAMOD PAWAR</h1>
+          <p class="tagline">Aspiring Software Developer | Passionate about AI & Web Development</p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn-primary">Explore Work <i class="fas fa-arrow-right"></i></a>
+            <a href="#contact" class="btn-outline">Contact Me</a>
           </div>
-          <p class="intro-desc">Computer Science student passionate about AI, full‑stack development, and solving real‑world problems. Ready to innovate and learn.</p>
-          <a href="#projects" class="btn primary-btn" id="viewPortfolioBtn">View Portfolio <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&auto=format" alt="Nikhil Pawar - Professional Student" loading="lazy">
+          <div class="floating-badge">
+            <i class="fas fa-code"></i> Full-Stack Enthusiast
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT Section -->
-    <section id="about" class="section about-section">
+    <!-- ========== ABOUT SECTION ========== -->
+    <section id="about" class="about">
       <div class="container">
-        <h2 class="section-title">About Me</h2>
+        <div class="section-title">
+          <h2>About Me</h2>
+          <div class="title-underline"></div>
+        </div>
         <div class="about-grid">
           <div class="about-text">
-            <h3>Education</h3>
-            <p><i class="fas fa-graduation-cap"></i> B.Tech in Computer Science, Pune University (2023–2027) | CGPA: 8.7/10</p>
-            <p><i class="fas fa-school"></i> Higher Secondary: Pune International School (92%)</p>
-            <h3>Interests & Goals</h3>
-            <p>AI/ML, Open Source, UI/UX Design. Career goal: Build scalable AI products that impact millions.</p>
-            <h3>Strengths</h3>
-            <div class="skills">
-              <div class="skill"><span>JavaScript/React</span><div class="progress-bar"><div class="progress" style="width: 85%"></div></div></div>
-              <div class="skill"><span>Python & AI</span><div class="progress-bar"><div class="progress" style="width: 80%"></div></div></div>
-              <div class="skill"><span>HTML/CSS/Flex/Grid</span><div class="progress-bar"><div class="progress" style="width: 90%"></div></div></div>
-              <div class="skill"><span>Problem Solving</span><div class="progress-bar"><div class="progress" style="width: 75%"></div></div></div>
+            <p>I'm <strong>Nikhil Pramod Pawar</strong>, a Computer Science student at <strong>MIT Vishwaprayag University</strong> (2022–2026) with deep curiosity for AI-driven solutions and modern web experiences.</p>
+            <div class="about-details">
+              <div class="detail-item">
+                <i class="fas fa-graduation-cap"></i>
+                <div><strong>Education</strong><br>B.Tech in Computer Science, MIT Vishwaprayag University (2022–2026)</div>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-heart"></i>
+                <div><strong>Interests</strong><br>Web Development, AI, UI/UX Design, Problem Solving</div>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-bullseye"></i>
+                <div><strong>Career Goal</strong><br>Full-stack developer building innovative AI-driven solutions</div>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-brain"></i>
+                <div><strong>Strengths</strong><br>Quick learner, Team player, Creative thinker, Strong problem-solving</div>
+              </div>
             </div>
           </div>
-          <div class="about-highlight">
-            <i class="fas fa-code"></i> <i class="fas fa-robot"></i> <i class="fas fa-mobile-alt"></i>
-            <p>“Always learning, always building.”</p>
+          <div class="about-stats">
+            <div class="stat-card">
+              <i class="fas fa-laptop-code"></i>
+              <h3>5+</h3>
+              <p>Projects Completed</p>
+            </div>
+            <div class="stat-card">
+              <i class="fas fa-certificate"></i>
+              <h3>5+</h3>
+              <p>Certifications</p>
+            </div>
+            <div class="stat-card">
+              <i class="fas fa-clock"></i>
+              <h3>1000+</h3>
+              <p>Coding Hours</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ACHIEVEMENTS Section -->
-    <section id="achievements" class="section achievements-section">
+    <!-- ========== PROJECTS SECTION (CARDS) ========== -->
+    <section id="projects" class="projects">
       <div class="container">
-        <h2 class="section-title">Achievements & Awards</h2>
-        <div class="cards-grid">
-          <div class="achievement-card">
-            <img src="assets/images/cert-ai4a.jpg" alt="AI4A Certificate" onerror="this.src='https://placehold.co/400x250?text=AI4A+Award'">
-            <h3>AI4A Innovation Award</h3>
-            <p>Recognized for best AI prototype solving agricultural challenges. Organized by Smart India Hackathon.</p>
-          </div>
-          <div class="achievement-card">
-            <img src="assets/images/code-clash.jpg" alt="Code Clash" onerror="this.src='https://placehold.co/400x250?text=Code+Clash+Winner'">
-            <h3>Code Clash 2024</h3>
-            <p>1st place in inter-college coding competition, solving 5/5 algorithmic problems under 2 hours.</p>
-          </div>
-          <div class="achievement-card">
-            <img src="assets/images/design-thinking-workshop.jpg" alt="Design Thinking" onerror="this.src='https://placehold.co/400x250?text=Design+Thinking+Cert'">
-            <h3>Design Thinking Champion</h3>
-            <p>Selected top 3 in Design Thinking workshop for innovative student-centric product.</p>
-          </div>
+        <div class="section-title">
+          <h2>Featured Projects</h2>
+          <div class="title-underline"></div>
         </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS Section -->
-    <section id="projects" class="section projects-section">
-      <div class="container">
-        <h2 class="section-title">Featured Projects</h2>
         <div class="projects-grid">
+          <!-- Project 1: AI4A -->
           <div class="project-card">
-            <img src="assets/images/ai4a-project.jpg" alt="AI4A Project" onerror="this.src='https://placehold.co/500x300?text=AI4A+Project'">
-            <h3>AI4A Project</h3>
-            <p>AI-powered recommendation engine for sustainable farming practices using TensorFlow and weather data.</p>
-            <div class="project-links">
-              <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-              <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+            <div class="card-img">
+              <img src="https://images.unsplash.com/photo-1581092335871-44f406c3f6af?w=500&auto=format" alt="AI face recognition system">
+            </div>
+            <div class="card-content">
+              <h3>Smart Attendance System</h3>
+              <p>AI-based face recognition system for automated attendance tracking. Built with Python, OpenCV, and deep learning models.</p>
+              <div class="tech-tags">
+                <span>AI/ML</span><span>OpenCV</span><span>Python</span>
+              </div>
+              <a href="https://github.com/example/ai4a-project" target="_blank" class="card-link">GitHub Repo <i class="fab fa-github"></i></a>
             </div>
           </div>
+          <!-- Project 2: Design Thinking -->
           <div class="project-card">
-            <img src="assets/images/design-thinking.jpg" alt="Design Thinking" onerror="this.src='https://placehold.co/500x300?text=Design+Thinking'">
-            <h3>Design Thinking Project</h3>
-            <p>Developed an inclusive e-learning platform prototype with user research & wireframing (Figma).</p>
-            <div class="project-links">
-              <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-              <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Prototype</a>
+            <div class="card-img">
+              <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=500&auto=format" alt="Eco-friendly product design">
+            </div>
+            <div class="card-content">
+              <h3>Eco-Friendly Product Design</h3>
+              <p>Sustainable product solution using design thinking methodology, focusing on user-centered sustainable materials.</p>
+              <div class="tech-tags">
+                <span>UI/UX</span><span>Design Thinking</span><span>Prototyping</span>
+              </div>
+              <a href="https://github.com/example/design-project" target="_blank" class="card-link">GitHub Repo <i class="fab fa-github"></i></a>
             </div>
           </div>
+          <!-- Project 3: ACE Project -->
           <div class="project-card">
-            <img src="assets/images/ace-project.jpg" alt="ACE Project" onerror="this.src='https://placehold.co/500x300?text=ACE+Project'">
-            <h3>ACE Project</h3>
-            <p>Automated Code Evaluator – web-based judge for student assignments, built with Node.js and Docker.</p>
-            <div class="project-links">
-              <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-              <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <div class="card-img">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&auto=format" alt="Student Management Dashboard">
+            </div>
+            <div class="card-content">
+              <h3>Student Management System</h3>
+              <p>Web application to manage student records, performance analytics, and automated reporting. MERN stack based.</p>
+              <div class="tech-tags">
+                <span>React</span><span>Node.js</span><span>MongoDB</span>
+              </div>
+              <a href="https://github.com/example/ace-project" target="_blank" class="card-link">GitHub Repo <i class="fab fa-github"></i></a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CERTIFICATIONS Section -->
-    <section id="certifications" class="section certs-section">
+    <!-- ========== CERTIFICATIONS SECTION (CARDS) ========== -->
+    <section id="certifications" class="certifications">
       <div class="container">
-        <h2 class="section-title">Certifications</h2>
+        <div class="section-title">
+          <h2>Certifications</h2>
+          <div class="title-underline"></div>
+        </div>
         <div class="certs-grid">
-          <div class="cert-card">
-            <img src="assets/images/coursera-ml.jpg" alt="Coursera ML" onerror="this.src='https://placehold.co/300x200?text=Coursera'">
-            <h3>Deep Learning Specialization</h3>
-            <p>Coursera | Andrew Ng</p>
-          </div>
-          <div class="cert-card">
-            <img src="assets/images/netacad-ccna.jpg" alt="Netacad" onerror="this.src='https://placehold.co/300x200?text=Netacad'">
-            <h3>CCNA: Introduction to Networks</h3>
-            <p>Cisco Netacad</p>
-          </div>
-          <div class="cert-card">
-            <img src="assets/images/yuva-ai.jpg" alt="Yuva AI" onerror="this.src='https://placehold.co/300x200?text=Yuva+AI'">
-            <h3>AI for Youth</h3>
-            <p>Yuva AI & NASSCOM</p>
-          </div>
-          <div class="cert-card">
-            <img src="assets/images/js-advanced.jpg" alt="JS Cert" onerror="this.src='https://placehold.co/300x200?text=JavaScript'">
-            <h3>JavaScript Advanced</h3>
-            <p>FreeCodeCamp</p>
-          </div>
+          <div class="cert-card"><i class="fab fa-coursera"></i><h3>Web Development Specialization</h3><p>Coursera</p></div>
+          <div class="cert-card"><i class="fas fa-microchip"></i><h3>AI for Everyone</h3><p>Coursera</p></div>
+          <div class="cert-card"><i class="fas fa-network-wired"></i><h3>Networking Basics</h3><p>Netacad</p></div>
+          <div class="cert-card"><i class="fas fa-shield-alt"></i><h3>Cybersecurity Essentials</h3><p>Netacad</p></div>
+          <div class="cert-card"><i class="fas fa-robot"></i><h3>AI Fundamentals Certification</h3><p>Yuva AI</p></div>
         </div>
       </div>
     </section>
 
-    <!-- GALLERY Section with Lightbox -->
-    <section id="gallery" class="section gallery-section">
+    <!-- ========== GALLERY SECTION (Lightbox support) ========== -->
+    <section id="gallery" class="gallery">
       <div class="container">
-        <h2 class="section-title">Gallery Moments</h2>
+        <div class="section-title">
+          <h2>Moments & Workspace</h2>
+          <div class="title-underline"></div>
+        </div>
         <div class="gallery-grid" id="galleryGrid">
-          <!-- Gallery items will be filled dynamically from JS (but we also include static images) -->
+          <div class="gallery-item" data-image="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&auto=format">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&auto=format" alt="Coding workspace" loading="lazy">
+            <div class="overlay-icon"><i class="fas fa-search-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-image="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&auto=format" alt="Team collaboration">
+            <div class="overlay-icon"><i class="fas fa-search-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-image="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&auto=format">
+            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&auto=format" alt="Innovation session">
+            <div class="overlay-icon"><i class="fas fa-search-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-image="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=800&auto=format">
+            <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=400&auto=format" alt="AI concept art">
+            <div class="overlay-icon"><i class="fas fa-search-plus"></i></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Lightbox Modal -->
-    <div id="lightboxModal" class="lightbox">
-      <span class="close-lightbox">&times;</span>
-      <img class="lightbox-content" id="lightboxImg">
-    </div>
-
-    <!-- CONTACT Section -->
-    <section id="contact" class="section contact-section">
+    <!-- ========== CONTACT SECTION ========== -->
+    <section id="contact" class="contact">
       <div class="container">
-        <h2 class="section-title">Let's Connect</h2>
+        <div class="section-title">
+          <h2>Get In Touch</h2>
+          <div class="title-underline"></div>
+        </div>
         <div class="contact-wrapper">
           <div class="contact-info">
-            <p><i class="fas fa-envelope"></i> nikhil.pawar@students.edu</p>
-            <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
-            <p><i class="fab fa-linkedin"></i> linkedin.com/in/nikhil-pawar</p>
-            <p><i class="fab fa-github"></i> github.com/nikhilpawar</p>
-            <div class="social-icons">
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-dev"></i></a>
-            </div>
+            <div class="contact-item"><i class="fas fa-envelope"></i><span>aarav.sharma@email.com</span></div>
+            <div class="contact-item"><i class="fas fa-phone-alt"></i><span>+91 9876543210</span></div>
+            <div class="contact-item"><i class="fab fa-linkedin"></i><span>linkedin.com/in/aaravsharma</span></div>
+            <div class="contact-item"><i class="fab fa-github"></i><span>github.com/aaravsharma</span></div>
           </div>
-          <form class="contact-form" id="contactForm">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Email Address" required>
-            <textarea rows="4" placeholder="Message..."></textarea>
-            <button type="submit" class="btn primary-btn">Send Message <i class="fas fa-paper-plane"></i></button>
-          </form>
+          <div class="social-links">
+            <a href="https://linkedin.com/in/aaravsharma" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/aaravsharma" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="mailto:aarav.sharma@email.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <p>&copy; 2026 NIKHIL PRAMOD PAWAR | All trademarks belong to respective owners</p>
-    <div class="footer-social">
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
+  <footer>
+    <div class="container">
+      <p>© 2025 Nikhil Pramod Pawar — Built with <i class="fas fa-heart"></i> for modern web & AI passion</p>
     </div>
   </footer>
+
+  <!-- ========== LIGHTBOX MODAL (IMAGE ENLARGE) ========== -->
+  <div id="lightboxModal" class="lightbox">
+    <span class="close-lightbox">&times;</span>
+    <img class="lightbox-img" id="lightboxImg" alt="Enlarged view">
+  </div>
 
   <script src="script.js"></script>
 </body>
