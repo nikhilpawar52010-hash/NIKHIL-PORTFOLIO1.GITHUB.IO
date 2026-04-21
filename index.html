@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Nikhil Pawar | Student Portfolio</title>
+  <!-- Google Fonts & Font Awesome for clean icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Dark/Light mode toggle (extra feature) -->
+  <div class="theme-toggle-wrapper">
+    <button id="themeToggle" class="theme-btn" aria-label="Dark/Light mode">
+      <i class="fas fa-moon"></i>
+    </button>
+  </div>
+
+  <!-- Navigation Bar (simple & sticky) -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">NP</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HOME Section -->
+    <section id="home" class="section home-section">
+      <div class="container home-container">
+        <div class="profile-img-wrapper">
+          <!-- placeholder profile image (replace with actual photo in assets/images) -->
+          <img src="assets/images/profile-placeholder.jpg" alt="Nikhil Pawar Profile" class="profile-photo" onerror="this.src='https://placehold.co/400x400?text=Nikhil+Pawar'">
+        </div>
+        <div class="home-content">
+          <h1 class="greeting">Hi, I'm <span class="highlight">NIKHIL PRAMOD PAWAR</span></h1>
+          <div class="typing-wrapper">
+            <span class="static-text">Aspiring </span>
+            <span class="dynamic-text" id="typedText"></span>
+          </div>
+          <p class="intro-desc">Computer Science student passionate about AI, full‑stack development, and solving real‑world problems. Ready to innovate and learn.</p>
+          <a href="#projects" class="btn primary-btn" id="viewPortfolioBtn">View Portfolio <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT Section -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <h3>Education</h3>
+            <p><i class="fas fa-graduation-cap"></i> B.Tech in Computer Science, Pune University (2023–2027) | CGPA: 8.7/10</p>
+            <p><i class="fas fa-school"></i> Higher Secondary: Pune International School (92%)</p>
+            <h3>Interests & Goals</h3>
+            <p>AI/ML, Open Source, UI/UX Design. Career goal: Build scalable AI products that impact millions.</p>
+            <h3>Strengths</h3>
+            <div class="skills">
+              <div class="skill"><span>JavaScript/React</span><div class="progress-bar"><div class="progress" style="width: 85%"></div></div></div>
+              <div class="skill"><span>Python & AI</span><div class="progress-bar"><div class="progress" style="width: 80%"></div></div></div>
+              <div class="skill"><span>HTML/CSS/Flex/Grid</span><div class="progress-bar"><div class="progress" style="width: 90%"></div></div></div>
+              <div class="skill"><span>Problem Solving</span><div class="progress-bar"><div class="progress" style="width: 75%"></div></div></div>
+            </div>
+          </div>
+          <div class="about-highlight">
+            <i class="fas fa-code"></i> <i class="fas fa-robot"></i> <i class="fas fa-mobile-alt"></i>
+            <p>“Always learning, always building.”</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS Section -->
+    <section id="achievements" class="section achievements-section">
+      <div class="container">
+        <h2 class="section-title">Achievements & Awards</h2>
+        <div class="cards-grid">
+          <div class="achievement-card">
+            <img src="assets/images/cert-ai4a.jpg" alt="AI4A Certificate" onerror="this.src='https://placehold.co/400x250?text=AI4A+Award'">
+            <h3>AI4A Innovation Award</h3>
+            <p>Recognized for best AI prototype solving agricultural challenges. Organized by Smart India Hackathon.</p>
+          </div>
+          <div class="achievement-card">
+            <img src="assets/images/code-clash.jpg" alt="Code Clash" onerror="this.src='https://placehold.co/400x250?text=Code+Clash+Winner'">
+            <h3>Code Clash 2024</h3>
+            <p>1st place in inter-college coding competition, solving 5/5 algorithmic problems under 2 hours.</p>
+          </div>
+          <div class="achievement-card">
+            <img src="assets/images/design-thinking-workshop.jpg" alt="Design Thinking" onerror="this.src='https://placehold.co/400x250?text=Design+Thinking+Cert'">
+            <h3>Design Thinking Champion</h3>
+            <p>Selected top 3 in Design Thinking workshop for innovative student-centric product.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS Section -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <img src="assets/images/ai4a-project.jpg" alt="AI4A Project" onerror="this.src='https://placehold.co/500x300?text=AI4A+Project'">
+            <h3>AI4A Project</h3>
+            <p>AI-powered recommendation engine for sustainable farming practices using TensorFlow and weather data.</p>
+            <div class="project-links">
+              <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+              <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="assets/images/design-thinking.jpg" alt="Design Thinking" onerror="this.src='https://placehold.co/500x300?text=Design+Thinking'">
+            <h3>Design Thinking Project</h3>
+            <p>Developed an inclusive e-learning platform prototype with user research & wireframing (Figma).</p>
+            <div class="project-links">
+              <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+              <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Prototype</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="assets/images/ace-project.jpg" alt="ACE Project" onerror="this.src='https://placehold.co/500x300?text=ACE+Project'">
+            <h3>ACE Project</h3>
+            <p>Automated Code Evaluator – web-based judge for student assignments, built with Node.js and Docker.</p>
+            <div class="project-links">
+              <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+              <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS Section -->
+    <section id="certifications" class="section certs-section">
+      <div class="container">
+        <h2 class="section-title">Certifications</h2>
+        <div class="certs-grid">
+          <div class="cert-card">
+            <img src="assets/images/coursera-ml.jpg" alt="Coursera ML" onerror="this.src='https://placehold.co/300x200?text=Coursera'">
+            <h3>Deep Learning Specialization</h3>
+            <p>Coursera | Andrew Ng</p>
+          </div>
+          <div class="cert-card">
+            <img src="assets/images/netacad-ccna.jpg" alt="Netacad" onerror="this.src='https://placehold.co/300x200?text=Netacad'">
+            <h3>CCNA: Introduction to Networks</h3>
+            <p>Cisco Netacad</p>
+          </div>
+          <div class="cert-card">
+            <img src="assets/images/yuva-ai.jpg" alt="Yuva AI" onerror="this.src='https://placehold.co/300x200?text=Yuva+AI'">
+            <h3>AI for Youth</h3>
+            <p>Yuva AI & NASSCOM</p>
+          </div>
+          <div class="cert-card">
+            <img src="assets/images/js-advanced.jpg" alt="JS Cert" onerror="this.src='https://placehold.co/300x200?text=JavaScript'">
+            <h3>JavaScript Advanced</h3>
+            <p>FreeCodeCamp</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY Section with Lightbox -->
+    <section id="gallery" class="section gallery-section">
+      <div class="container">
+        <h2 class="section-title">Gallery Moments</h2>
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- Gallery items will be filled dynamically from JS (but we also include static images) -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="lightbox">
+      <span class="close-lightbox">&times;</span>
+      <img class="lightbox-content" id="lightboxImg">
+    </div>
+
+    <!-- CONTACT Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <h2 class="section-title">Let's Connect</h2>
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <p><i class="fas fa-envelope"></i> nikhil.pawar@students.edu</p>
+            <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+            <p><i class="fab fa-linkedin"></i> linkedin.com/in/nikhil-pawar</p>
+            <p><i class="fab fa-github"></i> github.com/nikhilpawar</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-dev"></i></a>
+            </div>
+          </div>
+          <form class="contact-form" id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <textarea rows="4" placeholder="Message..."></textarea>
+            <button type="submit" class="btn primary-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 NIKHIL PRAMOD PAWAR | All trademarks belong to respective owners</p>
+    <div class="footer-social">
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
