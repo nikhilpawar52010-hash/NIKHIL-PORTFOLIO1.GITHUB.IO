@@ -9,7 +9,6 @@ if (savedTheme === 'dark') {
 } else {
   toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
 }
-
 toggleBtn.addEventListener('click', () => {
   body.classList.toggle('dark');
   const isDark = body.classList.contains('dark');
